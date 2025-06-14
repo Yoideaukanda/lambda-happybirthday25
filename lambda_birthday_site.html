@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <
+  <meta charset="UTF-8">
+  <title>300万円GETの裏技</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: lime;
+      color: blue;
+      text-align: center;
+      font-family: fantasy, cursive, 'Comic Sans MS', sans-serif;
+    }
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-top: 50px;
+      font-family: 'Impact', sans-serif;
+    }
+    #clickBtn {
+      background: red;
+      color: yellow;
+      font-size: 2rem;
+      border: 5px double magenta;
+      padding: 1rem 2rem;
+      margin-top: 40px;
+      cursor: pointer;
+      animation: flash 1s infinite;
+      font-family: 'Courier New', monospace;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.1; }
+    }
+    #fakeAlert, #message {
+      margin: 2rem auto;
+      width: 80%;
+      background: white;
+      border: 5px dashed red;
+      padding: 2rem;
+      display: none;
+      font-family: 'Brush Script MT', cursive;
+    }
+    #message {
+      border-color: gold;
+      background-color: #e0ffe0;
+    }
+    .rainbow-text-gradient {
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>簡単に300万円を手に入れる方法！？</h1>
+  <button id="clickBtn">今すぐ試す</button>
+
+  <div id="fakeAlert">
+    <p style="font-size: 1.5rem; color: red; font-family: 'Arial Black';">🚨 あなたの口座から <strong>¥300,000</strong> を引き出しました。</p>
+    <p>※取り消すには下のボタンをクリックしてください。</p>
+    <button id="cancelBtn">キャンセル</button>
+  </div>
+
+  <div id="message">
+    <h2 class="rainbow-text-gradient" style="font-family: 'Comic Sans MS';">お誕生日おめでとうございます！</h2>
+    <p class="rainbow-text-gradient">
+      受験のときのメッセージ、本当に励みになりました。ありがとうございました！
+      動画で見た内容を高校でもっと詳しく学べるようになって、授業が楽しいです！
+      プログラミング言語も少しずつ勉強中で、自分で書いたコードが形になっていくのがすごく楽しいです！
+      英語にはまだ苦戦中ですが、新しい知識が増えていくのが嬉しい毎日です！
+      季節の変わり目なので、体調に気をつけてお過ごしください。これからも応援しています！
+    </p>
+  </div>
+
+  <script>
+    const clickBtn = document.getElementById('clickBtn');
+    const fakeAlert = document.getElementById('fakeAlert');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const message = document.getElementById('message');
+
+    clickBtn.addEventListener('click', () => {
+      clickBtn.style.display = 'none';
+      fakeAlert.style.display = 'block';
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      fakeAlert.style.display = 'none';
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
